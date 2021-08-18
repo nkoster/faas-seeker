@@ -1,4 +1,4 @@
-'use strict'
+require('dotenv').config()
 
 module.exports = (body, res) => {
 
@@ -14,7 +14,7 @@ module.exports = (body, res) => {
       database: process.env.PGDATABASE || 'postgres',
       user: process.env.PGUSER || 'postgres',
       host: process.env.PGHOST || 'db.fhirstation.net',
-      port: process.env.PGPORT || '50505',
+      port: process.env.PGPORT || '5432',
       ssl: {
         rejectUnauthorized: false,
         ca: fs.readFileSync(__dirname + '/tls/root.crt').toString(),
