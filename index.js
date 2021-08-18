@@ -6,7 +6,6 @@ module.exports = (body, res) => {
     if (!body.search) {
       return res.send({ error: 'No query' })
     }
-    console.log(__dirname)
   
     const DEBUG = true
     const fs = require('fs')
