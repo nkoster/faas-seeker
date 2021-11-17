@@ -11,9 +11,9 @@ module.exports = (body, res) => {
     const fs = require('fs')
     
     const config = {
-      database: process.env.PGDATABASE || 'postgres',
-      user: process.env.PGUSER || 'postgres',
-      host: process.env.PGHOST || 'db.fhirstation.net',
+      database: process.env.PGDATABASE || 'fhirstation',
+      user: process.env.PGUSER || 'fhirstation',
+      host: process.env.PGHOST || 'fhirstation-database',
       port: process.env.PGPORT || '5432',
       ssl: {
         rejectUnauthorized: false,
