@@ -11,10 +11,11 @@ module.exports = (body, res) => {
     const fs = require('fs')
     
     const config = {
-      database: process.env.PGDATABASE || 'fhirstation',
+      database: process.env.PGDATABASE || 'kafkasearch',
       user: process.env.PGUSER || 'fhirstation',
-      host: process.env.PGHOST || 'fhirstation-database',
+      host: process.env.PGHOST || 'fhirstation-database-coordinator-0.fhirstation-database-coordinator',
       port: process.env.PGPORT || '5432',
+      password: process.env.PGPASSWORD || 'postgres_password_123',
       ssl: {
         rejectUnauthorized: false,
         ca: fs.readFileSync(__dirname + '/tls/root.crt').toString(),
